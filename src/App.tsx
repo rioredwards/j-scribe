@@ -25,6 +25,8 @@ const App = () => {
       return;
     }
 
+    iframe.current.srcdoc = html;
+
     const result = await ref.current.build({
       entryPoints: ["index.js"],
       bundle: true,
@@ -46,12 +48,23 @@ const App = () => {
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Document</title>
+      <style>
+        .error {
+          color: red;
+        }
+      </style>
     </head>
     <body>
       <div id="root"></div>
       <script>
         window.addEventListener('message', (event) => {
+          try {
             eval(event.data);
+          } catch (err) {
+            const root = document.querySelector('#root');
+            root.innerHTML = '<div class="error"><h4>Runtime Error</h4>' + err + '</div>';
+            console.error(err);
+          }
         }, false); 
       </script>
     </body>
