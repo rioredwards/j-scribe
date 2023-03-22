@@ -1,3 +1,4 @@
+// -- unpkg-path-plugin.ts --
 import * as esbuild from "esbuild-wasm";
 
 export const unpkgPathPlugin = () => {

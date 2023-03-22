@@ -1,8 +1,10 @@
+// -- App.tsx --
 import "./App.css";
 import * as esbuild from "esbuild-wasm";
 import { useState, useEffect, useRef } from "react";
 import { unpkgPathPlugin } from "./plugins/unpkg-path-plugin";
 import { fetchPlugin } from "./plugins/fetch-plugin";
+import CodeEditor from "./components/codeEditor";
 
 const App = () => {
   const ref = useRef<any>();
@@ -72,6 +74,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <CodeEditor />
       <textarea
         value={input}
         onChange={(e) => setInput(e.target.value)}></textarea>
