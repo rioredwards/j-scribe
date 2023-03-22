@@ -11,24 +11,28 @@ export const fetchPlugin = (inputCode: string) => {
     name: "fetch-plugin",
     setup(build: esbuild.PluginBuild) {
       build.onLoad({ filter: /(^index\.js$)/ }, () => {
+        // This loader targets the entry file
         return {
           loader: "jsx",
           contents: inputCode,
         };
       });
 
-      build.onLoad({ filter: /.css*/ }, async (args: any) => {
-        // Check to see if we have already fetched this file
-        // and if it is in the cache
+      build.onLoad({ filter: /.*/ }, async (args: any) => {
+        // This loader targets all other files and checks to see if they are in the cache
+        // Check to see if file is already in cache
         const cachedResult = await fileCache.getItem<esbuild.OnLoadResult>(
           args.path
         );
 
-        // if it is, return it immediately
+        // If it is, return it immediately
         if (cachedResult) {
           return cachedResult;
         }
+      });
 
+      build.onLoad({ filter: /.css*/ }, async (args: any) => {
+        // This loader targets css files
         const { data, request } = await axios.get(args.path);
 
         const contents = `
@@ -49,14 +53,7 @@ export const fetchPlugin = (inputCode: string) => {
       });
 
       build.onLoad({ filter: /.*/ }, async (args: any) => {
-        const cachedResult = await fileCache.getItem<esbuild.OnLoadResult>(
-          args.path
-        );
-
-        if (cachedResult) {
-          return cachedResult;
-        }
-
+        // This loader targets all other files
         const { data, request } = await axios.get(args.path);
 
         const result: esbuild.OnLoadResult = {
