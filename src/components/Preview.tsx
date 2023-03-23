@@ -10,16 +10,20 @@ const Preview: React.FC<Props> = ({ code }) => {
 
   useEffect(() => {
     iframe.current.srcdoc = html;
-    iframe.current.contentWindow.postMessage(code, "*");
+    setTimeout(function () {
+      iframe.current.contentWindow.postMessage(code, "*");
+    }, 50);
   }, [code]);
 
   return (
-    <iframe
-      title="preview"
-      sandbox="allow-scripts"
-      ref={iframe}
-      srcDoc={html}
-    />
+    <div className="preview-wrapper">
+      <iframe
+        title="preview"
+        sandbox="allow-scripts"
+        ref={iframe}
+        srcDoc={html}
+      />
+    </div>
   );
 };
 
@@ -31,6 +35,9 @@ const html = `
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Document</title>
       <style>
+        html {
+          background-color: rgb(241, 241, 241);
+        }
         .error {
           color: red;
         }

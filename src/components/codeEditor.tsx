@@ -53,8 +53,8 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ onChange, initialValue }) => {
       <MonacoEditor
         editorDidMount={onEditorDidMount}
         value={initialValue}
-        language="javascript"
         theme="dark"
+        language="javascript"
         className="monaco-editor"
         options={{
           wordWrap: "on",
