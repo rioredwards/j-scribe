@@ -1,0 +1,27 @@
+.editor-wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.monaco-editor {
+  height: 15rem;
+  border: 1px solid #707070;
+}
+
+.editor-wrapper .button-format {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  z-index: 20;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border: 1px solid #707070;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.editor-wrapper:hover .button-format {
+  opacity: 1;
+}
