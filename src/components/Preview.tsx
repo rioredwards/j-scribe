@@ -3,9 +3,10 @@ import "./Preview.css";
 
 interface Props {
   code: string;
+  err: string;
 }
 
-const Preview: React.FC<Props> = ({ code }) => {
+const Preview: React.FC<Props> = ({ code, err }) => {
   const iframe = useRef<any>();
 
   useEffect(() => {
@@ -23,6 +24,7 @@ const Preview: React.FC<Props> = ({ code }) => {
         ref={iframe}
         srcDoc={html}
       />
+      {err && <div className="preview-error">{err}</div>}
     </div>
   );
 };
