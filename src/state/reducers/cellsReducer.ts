@@ -27,17 +27,19 @@ const cellsReducer = produce(
         state.data[id].content = content;
         return;
       case ActionType.DELETE_CELL:
-        return state;
+        delete state.data[action.payload];
+        state.order = state.order.filter((id) => id !== action.payload);
+        return;
       case ActionType.MOVE_CELL:
-        return state;
+        return;
       case ActionType.INSERT_CELL_BEFORE:
-        return state;
+        return;
       case ActionType.BUNDLE_START:
-        return state;
+        return;
       case ActionType.BUNDLE_COMPLETE:
-        return state;
+        return;
       default:
-        return state;
+        return;
     }
   }
 );
