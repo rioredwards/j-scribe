@@ -1,11 +1,9 @@
 iframe {
-  width: 30rem;
-  height: 8rem;
+  height: 100%;
   resize: vertical;
-  background-color: rgb(22, 56, 92);
+  background-color: rgb(241, 241, 241);
   font-family: monospace;
   font-size: 1rem;
   color: inherit;
   padding: 1rem;
-  margin: 2rem 0;
 }

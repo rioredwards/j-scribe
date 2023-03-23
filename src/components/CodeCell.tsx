@@ -22,9 +22,6 @@ const CodeCell = () => {
           initialValue='console.log("hello");'
           onChange={(value) => setInput(value)}
         />
-        <div>
-          <button onClick={onClick}>Submit</button>
-        </div>
         <Preview code={code} />
       </div>
     </Resizable>
