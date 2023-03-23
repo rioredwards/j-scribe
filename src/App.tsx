@@ -74,7 +74,7 @@ const App = () => {
   `;
 
   return (
-    <div className="App">
+    <div className="app">
       <CodeEditor
         initialValue="const a = 1;"
         onChange={(value) => setInput(value)}
