@@ -7,6 +7,7 @@ interface Props {}
 const TextEditor: React.FC<Props> = (props: Props) => {
   const ref = useRef<HTMLDivElement | null>(null);
   const [editing, setEditing] = useState(false);
+  const [value, setValue] = useState("# Header");
 
   useEffect(() => {
     // This sets edit mode to false when the user clicks outside the editor
@@ -29,14 +30,14 @@ const TextEditor: React.FC<Props> = (props: Props) => {
   if (editing) {
     return (
       <div className="text-editor" ref={ref}>
-        <MDEditor />
+        <MDEditor value={value} onChange={(v) => setValue(v || "")} />
       </div>
     );
   }
 
   return (
     <div className="text-editor" onClick={() => setEditing(true)}>
-      <MDEditor.Markdown source={"# Header"} />
+      <MDEditor.Markdown source={value} />
     </div>
   );
 };
