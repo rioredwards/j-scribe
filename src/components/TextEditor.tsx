@@ -1,3 +1,4 @@
+import "./TextEditor.css";
 import MDEditor from "@uiw/react-md-editor";
 import { useState, useEffect, useRef } from "react";
 
