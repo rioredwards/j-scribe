@@ -33,6 +33,9 @@ const html = `
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Document</title>
       <style>
+        html {
+          background-color: rgb(241, 241, 241);
+        }
         .error {
           color: red;
         }
