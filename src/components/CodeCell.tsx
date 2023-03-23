@@ -2,9 +2,9 @@
 import "./CodeCell.css";
 import { useState, useEffect } from "react";
 import Preview from "./Preview";
-import CodeEditor from "./CodeEditor";
 import bundle from "../bundler";
 import Resizable from "./Resizable";
+import CodeEditor from "./CodeEditor";
 
 const initialCode = `const root = document.getElementById("root");
 root.innerHTML = "<h1>Hello world!</h1>";`;
