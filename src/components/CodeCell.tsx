@@ -29,7 +29,6 @@ const CodeCell = () => {
       <div className="code-cell">
         <Resizable direction="horizontal">
           <CodeEditor
-            // prettier-ignore
             initialValue={initialCode}
             onChange={(value) => setInput(value)}
           />
