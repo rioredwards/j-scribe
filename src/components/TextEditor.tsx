@@ -36,8 +36,10 @@ const TextEditor: React.FC<Props> = (props: Props) => {
   }
 
   return (
-    <div className="text-editor" onClick={() => setEditing(true)}>
-      <MDEditor.Markdown source={value} />
+    <div className="text-editor card" onClick={() => setEditing(true)}>
+      <div className="card-content">
+        <MDEditor.Markdown source={value} />
+      </div>
     </div>
   );
 };
