@@ -1,7 +1,7 @@
 // -- CodeEditor.tsx --
 
 import React, { useRef } from "react";
-import "./codeEditor.css";
+import "./CodeEditor.css";
 import MonacoEditor, { EditorDidMount } from "@monaco-editor/react";
 import prettier from "prettier";
 import parser from "prettier/parser-babel";
