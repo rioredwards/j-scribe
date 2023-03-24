@@ -3,9 +3,10 @@ import "./Preview.css";
 
 interface Props {
   code: string;
+  err: string;
 }
 
-const Preview: React.FC<Props> = ({ code }) => {
+const Preview: React.FC<Props> = ({ code, err }) => {
   const iframe = useRef<any>();
 
   useEffect(() => {
@@ -23,6 +24,7 @@ const Preview: React.FC<Props> = ({ code }) => {
         ref={iframe}
         srcDoc={html}
       />
+      {err && <div className="preview-error">{err}</div>}
     </div>
   );
 };
@@ -46,15 +48,26 @@ const html = `
     <body>
       <div id="root"></div>
       <script>
+
+        const handleError = (err) => {
+          const root = document.querySelector('#root');
+          root.innerHTML = '<div class="error"><h4>Runtime Error</h4>' + err + '</div>';
+          console.error(err);
+        };
+
+        window.addEventListener('error', (event) => {
+          event.preventDefault();
+          handleError(event.error);
+        });
+
         window.addEventListener('message', (event) => {
           try {
             eval(event.data);
           } catch (err) {
-            const root = document.querySelector('#root');
-            root.innerHTML = '<div class="error"><h4>Runtime Error</h4>' + err + '</div>';
-            console.error(err);
+            handleError(err);
           }
         }, false); 
+
       </script>
     </body>
     </html>
