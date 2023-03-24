@@ -69,7 +69,8 @@ const cellsReducer = produce(
       default:
         return state;
     }
-  }
+  },
+  initialState
 );
 
 export default cellsReducer;
