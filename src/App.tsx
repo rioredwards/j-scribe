@@ -2,12 +2,13 @@
 import "./App.css";
 import "bulmaswatch/superhero/bulmaswatch.min.css";
 // import CodeCell from "./components/CodeCell";
-import TextEditor from "./components/TextEditor";
+// import TextEditor from "./components/TextEditor";
+import CellList from "./components/CellList";
 
 const App = () => {
   return (
     <div className="app">
-      <TextEditor />
+      <CellList />
     </div>
   );
 };
