@@ -21,6 +21,7 @@
     "local-api": "*"
   },
   "devDependencies": {
+    "@types/node": "^18.15.10",
     "typescript": "^5.0.2"
   }
 }
