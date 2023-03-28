@@ -17,5 +17,8 @@
   },
   "bugs": {
     "url": "https://github.com/rioredwards/jbook/issues"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.2"
   }
 }

@@ -5,12 +5,12 @@
   "author": "Rio Edwards <rioredwards@gmail.com>",
   "homepage": "https://github.com/rioredwards/jbook#readme",
   "license": "ISC",
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rioredwards/jbook.git"
   },
   "scripts": {
+    "start": "tsc --watch --preserveWatchOutput",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bugs": {
@@ -19,5 +19,8 @@
   "dependencies": {
     "commander": "7.0.0",
     "local-api": "*"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.2"
   }
 }
