@@ -4,14 +4,21 @@
   "description": "> TODO: description",
   "author": "Rio Edwards <rioredwards@gmail.com>",
   "homepage": "https://github.com/rioredwards/jbook#readme",
+  "bin": "dist/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "ISC",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rioredwards/jbook.git"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "start": "tsc --watch --preserveWatchOutput",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublishOnly": "tsc"
   },
   "bugs": {
     "url": "https://github.com/rioredwards/jbook/issues"
