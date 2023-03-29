@@ -1,1 +1,1 @@
-[{"content":"fsadfa","type":"code","id":"sr098"},{"content":"hksdjafhaklsdfjhaskdhfhdsjakdfjhasdjhfajshdlfajhsdkfjhhdjssjkfdhak","type":"text","id":"mgafg"}]
+[{"content":"show(\"hello\");","type":"code","id":"7do1e"}]

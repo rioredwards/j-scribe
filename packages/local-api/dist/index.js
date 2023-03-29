@@ -19,11 +19,8 @@ const serve = (port, filename, dir, useProxy) => {
         }));
     }
     else {
-        const packagePath = require.resolve("local-client/build/index.html");
-        const packageDir = path_1.default.dirname(packagePath);
-        console.log("packagePath: ", packagePath);
-        console.log("packageDir: ", packageDir);
-        app.use(express_1.default.static(packageDir));
+        const packagePath = require.resolve("@jbook-notes/local-client/build/index.html");
+        app.use(express_1.default.static(path_1.default.dirname(packagePath)));
     }
     return new Promise((resolve, reject) => {
         app.listen(port, resolve).on("error", reject);

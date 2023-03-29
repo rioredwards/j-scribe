@@ -22,11 +22,10 @@ export const serve = (
       })
     );
   } else {
-    const packagePath = require.resolve("local-client/build/index.html");
-    const packageDir = path.dirname(packagePath);
-    console.log("packagePath: ", packagePath);
-    console.log("packageDir: ", packageDir);
-    app.use(express.static(packageDir));
+    const packagePath = require.resolve(
+      "@jbook-notes/local-client/build/index.html"
+    );
+    app.use(express.static(path.dirname(packagePath)));
   }
 
   return new Promise<void>((resolve, reject) => {
