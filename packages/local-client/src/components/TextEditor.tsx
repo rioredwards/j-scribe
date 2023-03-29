@@ -5,7 +5,7 @@ import { Cell } from "../state";
 import { useActions } from "../hooks/useActions";
 
 interface Props {
-  cell: Cell
+  cell: Cell;
 }
 
 const TextEditor: React.FC<Props> = ({ cell }) => {
@@ -34,7 +34,10 @@ const TextEditor: React.FC<Props> = ({ cell }) => {
   if (editing) {
     return (
       <div className="text-editor" ref={ref}>
-        <MDEditor value={cell.content} onChange={(v) => updateCell(cell.id, v || '')} />
+        <MDEditor
+          value={cell.content}
+          onChange={(v) => updateCell(cell.id, v || "")}
+        />
       </div>
     );
   }
@@ -42,7 +45,7 @@ const TextEditor: React.FC<Props> = ({ cell }) => {
   return (
     <div className="text-editor card" onClick={() => setEditing(true)}>
       <div className="card-content">
-        <MDEditor.Markdown source={cell.content || "# Hello, World!"} />
+        <MDEditor.Markdown source={cell.content || "Click to edit!"} />
       </div>
     </div>
   );
