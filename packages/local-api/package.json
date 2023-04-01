@@ -19,7 +19,9 @@
   },
   "scripts": {
     "start": "tsc --watch --preserveWatchOutput",
-    "prepublishOnly": "tsc"
+    "prepublishOnly": "tsc",
+    "build:cli": "tsc",
+    "build:web": "tsc"
   },
   "bugs": {
     "url": "https://github.com/rioredwards/jbook/issues"

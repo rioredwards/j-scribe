@@ -43,7 +43,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prepublishOnly": "npm run build"
+    "build:cli": "npm run build",
+    "build:web": "npm run build"
   },
   "eslintConfig": {
     "extends": [
