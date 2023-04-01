@@ -21,7 +21,7 @@ exports.serveCommand = new commander_1.Command()
     .command("serve [filename]")
     .description("Open a file for editing")
     .option("-p, --port <number>", "port to run server on", "4005")
-    .action((filename = "notebook.js", options) => __awaiter(void 0, void 0, void 0, function* () {
+    .action((filename = "intro.js", options) => __awaiter(void 0, void 0, void 0, function* () {
     // Type predicate
     const isLocalApiError = (err) => {
         return typeof err.code === "string";
