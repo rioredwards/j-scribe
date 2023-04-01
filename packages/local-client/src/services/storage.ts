@@ -10,7 +10,8 @@ export async function fetchFromStorage() {
   let data: Cell[] | null;
   if (process.env.REACT_APP_WEB_BUILD === "true") {
     data = await cellsCache.getItem("cells");
-    if (!data) {
+    console.log("data: ", data);
+    if (data?.length === 0) {
       data = await fetchIntroFile();
     }
     return data;
