@@ -20,8 +20,7 @@
   "scripts": {
     "start": "tsc --watch --preserveWatchOutput",
     "prepublishOnly": "tsc",
-    "build:cli": "tsc",
-    "build:web": "tsc"
+    "build": "tsc"
   },
   "bugs": {
     "url": "https://github.com/rioredwards/jbook/issues"

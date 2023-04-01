@@ -6,8 +6,8 @@
   ],
   "scripts": {
     "start": "lerna run start --parallel",
-    "build:cli": "lerna run build:cli --parallel",
-    "build:web": "lerna run build:web --parallel"
+    "build:cli": "lerna run build --parallel",
+    "build:web": "lerna run build:web scope=local-client"
   },
   "devDependencies": {
     "lerna": "^6.6.1"

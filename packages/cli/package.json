@@ -18,8 +18,8 @@
   ],
   "scripts": {
     "start": "tsc --watch --preserveWatchOutput",
-    "build:cli": "esbuild src/index.ts --bundle --platform=node --bundle --minify --outfile=dist/index.js --define:process.env.NODE_ENV=\\\"cli\\\"",
-    "build:web": "esbuild src/index.ts --bundle --platform=node --bundle --minify --outfile=dist/index.js --define:process.env.NODE_ENV=\\\"web\\\""
+    "prebuild": "cpy _intro.js packages/cli/dist --cwd=./",
+    "build": "esbuild src/index.ts --bundle --platform=node --bundle --minify --outfile=dist/index.js --define:process.env.NODE_ENV=\\\"production\\\""
   },
   "bugs": {
     "url": "https://github.com/rioredwards/jbook/issues"
