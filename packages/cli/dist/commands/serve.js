@@ -21,16 +21,21 @@ exports.serveCommand = new commander_1.Command()
     .command("serve [filename]")
     .description("Open a file for editing")
     .option("-p, --port <number>", "port to run server on", "4005")
-    .action((filename = "intro.js", options) => __awaiter(void 0, void 0, void 0, function* () {
+    .action((filename = "_intro.js", options) => __awaiter(void 0, void 0, void 0, function* () {
     // Type predicate
     const isLocalApiError = (err) => {
         return typeof err.code === "string";
     };
     try {
-        const dir = path_1.default.join(process.cwd(), path_1.default.dirname(filename));
+        // If the filename is intro.js, then dir is __dirname (where script lives) and file is intro.js
+        // else dir is current working directory + any directory specified in the filename
+        const dir = filename === "_intro.js"
+            ? path_1.default.dirname(__dirname)
+            : path_1.default.join(process.cwd(), path_1.default.dirname(filename));
+        console.log("dir: ", dir);
         const file = path_1.default.basename(filename);
         yield (0, local_api_1.serve)(parseInt(options.port), file, dir, !isProduction);
-        console.log(`🥳 SUCCESS: Opened ${filename}. Navigate to http://localhost:${options.port} to edit the file.`);
+        console.log(`🥳 SUCCESS: Opened ${file}. Navigate to http://localhost:${options.port} to edit the file.`);
     }
     catch (err) {
         // Type guard
