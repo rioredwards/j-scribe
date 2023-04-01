@@ -30,7 +30,7 @@ exports.serveCommand = new commander_1.Command()
         // If the filename is intro.js, then dir is __dirname (where script lives) and file is intro.js
         // else dir is current working directory + any directory specified in the filename
         const dir = filename === "_intro.js"
-            ? path_1.default.dirname(__dirname)
+            ? __dirname
             : path_1.default.join(process.cwd(), path_1.default.dirname(filename));
         console.log("dir: ", dir);
         const file = path_1.default.basename(filename);

@@ -23,7 +23,7 @@ export const serveCommand = new Command()
       // else dir is current working directory + any directory specified in the filename
       const dir =
         filename === "_intro.js"
-          ? path.dirname(__dirname)
+          ? __dirname
           : path.join(process.cwd(), path.dirname(filename));
 
       console.log("dir: ", dir);
