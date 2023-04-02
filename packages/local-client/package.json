@@ -46,8 +46,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build:web": "npm run build",
-    "prebuild:web": "cpy _intro.js packages/local-client/public --cwd=../../",
-    "postbuild:web": "rimraf ./public/_intro.js"
+    "prebuild:web": "cpy _intro.js packages/local-client/public --cwd=../../"
   },
   "eslintConfig": {
     "extends": [
