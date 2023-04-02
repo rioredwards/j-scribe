@@ -1,7 +1,6 @@
 import { Action, Dispatch } from "redux";
-import axios from "axios";
 import { ActionType } from "../action-types";
-import { Cell, CellTypes } from "../cell";
+import { CellTypes } from "../cell";
 import {
   DeleteCellAction,
   InsertCellAfterAction,
@@ -11,6 +10,7 @@ import {
 } from "../actions";
 import bundle from "../../bundler";
 import { RootState } from "../reducers";
+import { fetchFromStorage, saveToStorage } from "../../services/storage";
 
 export const updateCell = (id: string, content: string): UpdateCellAction => {
   return {
@@ -78,7 +78,7 @@ export const fetchCells = () => {
     dispatch({ type: ActionType.FETCH_CELLS });
 
     try {
-      const { data }: { data: Cell[] } = await axios.get("/cells");
+      const data = await fetchFromStorage();
 
       dispatch({
         type: ActionType.FETCH_CELLS_COMPLETE,
@@ -104,7 +104,7 @@ export const saveCells = () => {
     const cells = order.map((id) => data[id]);
 
     try {
-      await axios.post("/cells", { cells });
+      saveToStorage(cells);
     } catch (err) {
       if (err instanceof Error) {
         dispatch({

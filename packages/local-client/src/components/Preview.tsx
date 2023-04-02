@@ -38,7 +38,7 @@ const html = `
       <title>Document</title>
       <style>
         html {
-          background-color: rgb(241, 241, 241);
+          background-color: white;
         }
         .error {
           color: red;
