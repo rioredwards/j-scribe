@@ -2,8 +2,6 @@
 
 Your **All-in-One** JavaScript **Sandbox** and **Notebook**.
 
-![jbook screenshot](../../assets/jbook-logo-black-1024-text.svg)
-
 jbook provides users with a versatile platform to create, share, and modify code snippets in real-time.
 
 With support for a variety of libraries and frameworks, jbook's intuitive user interface and live preview make it easy to see the results of your code as you type.
@@ -34,10 +32,6 @@ This project served as an educational exercise to enhance my understanding of Ty
 3. Open new or existing notes with `jbook-notes serve <filename>` (Optionally include a filepath: `jbook-notes serve <path/filename>`).
 4. Run `jbook-notes --help` for additional help
 
-## Preview
-
-![jbook preview](../../assets/jbook_preview.webp)
-
 ## Lessons Learned
 
 - **Best Practices** for designing and building advanced, **production-ready** apps.
@@ -45,7 +39,7 @@ This project served as an educational exercise to enhance my understanding of Ty
 - Designing highly **reusable React components**.
 - Creating a **custom plugin** for **Esbuild** to enable in-browser transpiling/bundling with support for imports from npm.
 - Creating a **caching layer** for imported modules/bundled code using Local-Forage.
-- Using **Redux-Middlewares** for handling complex buisness logic.
+- Using **Redux-Middlewares** for handling complex business logic.
 - Taking advantage of powerful **third-party libraries** such as: bulma, immer, monaco-editor, react-md-editor, commander, etc...
 - **Safely handling user-input** by utilizing iframes as a code-execution environment- the same technique used by popular sites such as Codepen.
 - Utilizing lerna and nx to create a **mono-repo** with multiple packages and build targets.
