@@ -2,7 +2,7 @@
 
 Your **All-in-One** JavaScript **Sandbox** and **Notebook**.
 
-![jbook screenshot](../../assets/icon_large_text.png)
+![jbook screenshot](assets/icon_large_text.png)
 
 jbook provides users with a versatile platform to create, share, and modify code snippets in real-time.
 
@@ -36,7 +36,7 @@ This project served as an educational exercise to enhance my understanding of Ty
 
 ## Preview
 
-![jbook preview](../../assets/jbook_preview.webp)
+![jbook preview](assets/jbook_preview.webp)
 
 ## Lessons Learned
 
