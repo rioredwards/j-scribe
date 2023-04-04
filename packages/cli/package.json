@@ -17,7 +17,7 @@
     "dist"
   ],
   "scripts": {
-    "start": "tsc && node dist/index.js serve",
+    "start": "node dist/index.js serve",
     "prebuild": "cpy _intro.js packages/cli/dist --cwd=../../",
     "build": "esbuild src/index.ts --bundle --platform=node --bundle --minify --outfile=dist/index.js --define:process.env.NODE_ENV=\\\"production\\\""
   },
