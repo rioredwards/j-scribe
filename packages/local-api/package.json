@@ -1,6 +1,6 @@
 {
   "name": "@jbook-notes/local-api",
-  "version": "1.2.2",
+  "version": "1.2.6",
   "description": "> TODO: description",
   "author": "Rio Edwards <rioredwards@gmail.com>",
   "homepage": "https://github.com/rioredwards/jbook#readme",
@@ -18,7 +18,6 @@
     "url": "git+https://github.com/rioredwards/jbook.git"
   },
   "scripts": {
-    "start": "tsc --watch --preserveWatchOutput",
     "prepublishOnly": "tsc",
     "build": "tsc"
   },
@@ -31,7 +30,7 @@
     "typescript": "^5.0.2"
   },
   "dependencies": {
-    "@jbook-notes/local-client": "^1.2.2",
+    "@jbook-notes/local-client": "^1.2.6",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "http-proxy-middleware": "^2.0.6"

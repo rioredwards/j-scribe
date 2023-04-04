@@ -2,6 +2,8 @@
 
 Your **All-in-One** JavaScript **Sandbox** and **Notebook**.
 
+![jbook screenshot](https://raw.githubusercontent.com/rioredwards/jbook/main/assets/jbook-logo-banner-white.svg)
+
 jbook provides users with a versatile platform to create, share, and modify code snippets in real-time.
 
 With support for a variety of libraries and frameworks, jbook's intuitive user interface and live preview make it easy to see the results of your code as you type.
@@ -31,6 +33,10 @@ This project served as an educational exercise to enhance my understanding of Ty
 2. Open the built-in tutorial with `jbook-notes serve _intro` and follow the instructions to get familiar with the basic features jbook offers.
 3. Open new or existing notes with `jbook-notes serve <filename>` (Optionally include a filepath: `jbook-notes serve <path/filename>`).
 4. Run `jbook-notes --help` for additional help
+
+## Preview
+
+![jbook preview](https://raw.githubusercontent.com/rioredwards/jbook/main/assets/jbook_preview.webp)
 
 ## Lessons Learned
 
