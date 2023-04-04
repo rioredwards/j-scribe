@@ -1,6 +1,6 @@
 {
   "name": "@jbook-notes/local-client",
-  "version": "1.2.3",
+  "version": "1.2.6",
   "publishConfig": {
     "access": "public"
   },
