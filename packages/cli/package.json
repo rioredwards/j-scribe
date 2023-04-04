@@ -18,7 +18,7 @@
   ],
   "scripts": {
     "start": "tsc --watch --preserveWatchOutput",
-    "prebuild": "cpy _intro.js packages/cli/dist --cwd=./",
+    "prebuild": "cpy _intro.js packages/cli/dist --cwd=../../",
     "build": "esbuild src/index.ts --bundle --platform=node --bundle --minify --outfile=dist/index.js --define:process.env.NODE_ENV=\\\"production\\\""
   },
   "bugs": {
