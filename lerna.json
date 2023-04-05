@@ -1,8 +1,10 @@
 {
-  "packages": [
-    "packages/*"
-  ],
-  "version": "1.1.1",
+  "packages": ["packages/*"],
+  "version": "1.0.0",
   "$schema": "node_modules/lerna/schemas/lerna-schema.json",
-  "useWorkspaces": true
+  "useWorkspaces": true,
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "@my-org:registry": "https://www.npmjs.com/org/j-scribe1"
+  }
 }
