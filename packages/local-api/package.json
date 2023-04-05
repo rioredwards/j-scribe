@@ -18,8 +18,8 @@
     "url": "git+https://github.com/rioredwards/j-scribe.git"
   },
   "scripts": {
-    "prepublishOnly": "tsc",
-    "build": "tsc"
+    "build": "tsc --watch --preserveWatchOutput",
+    "prepublishOnly": "tsc"
   },
   "bugs": {
     "url": "https://github.com/rioredwards/j-scribe/issues"
@@ -30,7 +30,7 @@
     "typescript": "^5.0.2"
   },
   "dependencies": {
-    "@j-scribe1/local-client": "^1.0.0",
+    "@j-scribe1/local-client": "^*",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "http-proxy-middleware": "^2.0.6"
