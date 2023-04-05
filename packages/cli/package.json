@@ -1,6 +1,6 @@
 {
   "name": "j-scribe1",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Your All-in-One JavaScript Sandbox and Notebook.",
   "author": "Rio Edwards <rioredwards@gmail.com>",
   "homepage": "https://github.com/rioredwards/j-scribe#readme",
@@ -26,10 +26,10 @@
     "url": "https://github.com/rioredwards/j-scribe/issues"
   },
   "dependencies": {
-    "@j-scribe1/local-client": "^1.0.0"
+    "@j-scribe1/local-client": "^1.0.1"
   },
   "devDependencies": {
-    "@j-scribe1/local-api": "^1.0.0",
+    "@j-scribe1/local-api": "^1.0.1",
     "@types/node": "^18.15.10",
     "commander": "7.0.0",
     "esbuild": "^0.8.26",
