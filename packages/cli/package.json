@@ -33,5 +33,6 @@
     "commander": "7.0.0",
     "esbuild": "^0.8.26",
     "typescript": "^5.0.2"
-  }
+  },
+  "gitHead": "f5a1b062c79c4d4882326b1bd342c2f711525249"
 }
