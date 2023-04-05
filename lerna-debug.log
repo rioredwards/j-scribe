@@ -1,5 +1,5 @@
-52 error Error: Command failed with exit code 128: git tag v1.0.1 -m v1.0.1
-52 error fatal: tag 'v1.0.1' already exists
+52 error Error: Command failed with exit code 128: git tag v1.1.1 -m v1.1.1
+52 error fatal: tag 'v1.1.1' already exists
 52 error     at makeError (/Users/rioedwards/.nvm/versions/node/v16.19.1/lib/node_modules/lerna/node_modules/execa/lib/error.js:59:11)
 52 error     at handlePromise (/Users/rioedwards/.nvm/versions/node/v16.19.1/lib/node_modules/lerna/node_modules/execa/index.js:114:26)
 52 error     at processTicksAndRejections (node:internal/process/task_queues:96:5)
