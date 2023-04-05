@@ -1,9 +1,9 @@
 {
-  "name": "jbook-notes",
+  "name": "j-scribe",
   "version": "1.2.6",
   "description": "> TODO: description",
   "author": "Rio Edwards <rioredwards@gmail.com>",
-  "homepage": "https://github.com/rioredwards/jbook#readme",
+  "homepage": "https://github.com/rioredwards/j-scribe#readme",
   "bin": "dist/index.js",
   "publishConfig": {
     "access": "public"
@@ -11,7 +11,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rioredwards/jbook.git"
+    "url": "git+https://github.com/rioredwards/j-scribe.git"
   },
   "files": [
     "dist"
@@ -22,13 +22,13 @@
     "build": "esbuild src/index.ts --bundle --platform=node --bundle --minify --outfile=dist/index.js --define:process.env.NODE_ENV=\\\"production\\\""
   },
   "bugs": {
-    "url": "https://github.com/rioredwards/jbook/issues"
+    "url": "https://github.com/rioredwards/j-scribe/issues"
   },
   "dependencies": {
-    "@jbook-notes/local-client": "^1.2.6"
+    "@j-scribe/local-client": "^1.2.6"
   },
   "devDependencies": {
-    "@jbook-notes/local-api": "^1.2.6",
+    "@j-scribe/local-api": "^1.2.6",
     "@types/node": "^18.15.10",
     "commander": "7.0.0",
     "esbuild": "^0.8.26",

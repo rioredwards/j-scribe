@@ -1,5 +1,5 @@
 {
-  "name": "@jbook-notes/local-client",
+  "name": "@j-scribe/local-client",
   "version": "1.2.6",
   "publishConfig": {
     "access": "public"

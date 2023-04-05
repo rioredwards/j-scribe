@@ -1,12 +1,12 @@
-# jbook
+# j-scribe
 
 Your **All-in-One** JavaScript **Sandbox** and **Notebook**.
 
-![jbook screenshot](https://raw.githubusercontent.com/rioredwards/jbook/main/assets/jbook-logo-banner-white.svg)
+![j-scribe screenshot](https://raw.githubusercontent.com/rioredwards/j-scribe/main/assets/j-scribe-logo-banner-white.svg)
 
-jbook provides users with a versatile platform to create, share, and modify code snippets in real-time.
+j-scribe provides users with a versatile platform to create, share, and modify code snippets in real-time.
 
-With support for a variety of libraries and frameworks, jbook's intuitive user interface and live preview make it easy to see the results of your code as you type.
+With support for a variety of libraries and frameworks, j-scribe's intuitive user interface and live preview make it easy to see the results of your code as you type.
 
 ---
 
@@ -21,22 +21,22 @@ This project served as an educational exercise to enhance my understanding of Ty
 ## Features
 
 - **All-in-One Sandbox**: Write, edit, and preview JavaScript and React code snippets without the need for external tools.
-- **Real-Time Editing**: See the results of your code immediately with jbook's live preview feature, making it easier to debug and visualize your work.
+- **Real-Time Editing**: See the results of your code immediately with j-scribe's live preview feature, making it easier to debug and visualize your work.
 - **Library Support**: Utilize popular libraries and frameworks to enhance your coding experience.
-- **Text-Editor**: jbook provides a user-friendly way to document code using the built-in Markdown text-editor.
-- **Sharing and Collaboration**: jbook projects are automatically serialized and saved to user's machines, making it possible to store and share projects with others.
-- **Command-Line Interface**: jbook offers a convenient CLI, available on npm, for opening and creating jbook files from the command line. `jbook serve <filename>` starts a local API and opens the front-end application on a localhost port, allowing users to easily access and interact with jbook in their browser.
+- **Text-Editor**: j-scribe provides a user-friendly way to document code using the built-in Markdown text-editor.
+- **Sharing and Collaboration**: j-scribe projects are automatically serialized and saved to user's machines, making it possible to store and share projects with others.
+- **Command-Line Interface**: j-scribe offers a convenient CLI, available on npm, for opening and creating j-scribe files from the command line. `j-scribe serve <filename>` starts a local API and opens the front-end application on a localhost port, allowing users to easily access and interact with j-scribe in their browser.
 
 ## Usage
 
-1. Install the [CLI](https://www.npmjs.com/package/jbook-notes) by running `npm i jbook-notes`.
-2. Open the built-in tutorial with `jbook-notes serve _intro` and follow the instructions to get familiar with the basic features jbook offers.
-3. Open new or existing notes with `jbook-notes serve <filename>` (Optionally include a filepath: `jbook-notes serve <path/filename>`).
-4. Run `jbook-notes --help` for additional help
+1. Install the [CLI](https://www.npmjs.com/package/j-scribe) by running `npm i j-scribe`.
+2. Open the built-in tutorial with `j-scribe serve _intro` and follow the instructions to get familiar with the basic features j-scribe offers.
+3. Open new or existing notes with `j-scribe serve <filename>` (Optionally include a filepath: `j-scribe serve <path/filename>`).
+4. Run `j-scribe --help` for additional help
 
 ## Preview
 
-![jbook preview](https://raw.githubusercontent.com/rioredwards/jbook/main/assets/jbook_preview.webp)
+![j-scribe preview](https://raw.githubusercontent.com/rioredwards/j-scribe/main/assets/j-scribe_preview.webp)
 
 ## Lessons Learned
 

@@ -1,6 +1,6 @@
 import path from "path";
 import { Command } from "commander";
-import { serve } from "@jbook-notes/local-api";
+import { serve } from "@j-scribe/local-api";
 
 interface LocalApiError {
   code: string;
@@ -38,7 +38,7 @@ export const serveCommand = new Command()
       if (isLocalApiError(err)) {
         if (err.code === "EADDRINUSE") {
           console.error(
-            `😢 ERROR: Port ${options.port} is in use - try running on a different port using 'jbook serve -p <your-port-here>'`
+            `😢 ERROR: Port ${options.port} is in use - try running on a different port using 'j-scribe serve -p <your-port-here>'`
           );
         }
       } else if (err instanceof Error) {
