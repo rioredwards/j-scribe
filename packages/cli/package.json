@@ -1,5 +1,5 @@
 {
-  "name": "j-scribe",
+  "name": "j-scribe-cli",
   "version": "1.0.2",
   "description": "Your All-in-One JavaScript Sandbox and Notebook.",
   "author": "Rio Edwards <rioredwards@gmail.com>",
@@ -34,5 +34,5 @@
     "esbuild": "^0.8.26",
     "typescript": "^5.0.2"
   },
-  "gitHead": "f5a1b062c79c4d4882326b1bd342c2f711525249"
+  "gitHead": "f7d6e0d7a41e0845205b4d0d2d4e42d2dbe96317"
 }

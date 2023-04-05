@@ -1,0 +1,37 @@
+{
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "nx/tasks-runners/default",
+      "options": {
+        "cacheableOperations": [
+          "prebuild",
+          "build",
+          "build:web",
+          "prebuild:web"
+        ]
+      }
+    }
+  },
+  "targetDefaults": {
+    "prebuild": {
+      "dependsOn": [
+        "^prebuild"
+      ]
+    },
+    "build": {
+      "dependsOn": [
+        "^build"
+      ]
+    },
+    "build:web": {
+      "dependsOn": [
+        "^build:web"
+      ]
+    },
+    "prebuild:web": {
+      "dependsOn": [
+        "^prebuild:web"
+      ]
+    }
+  }
+}
