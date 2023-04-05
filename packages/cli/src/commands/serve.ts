@@ -1,6 +1,6 @@
 import path from "path";
 import { Command } from "commander";
-import { serve } from "@j-scribe/local-api";
+import { serve } from "@j-scribe1/local-api";
 
 interface LocalApiError {
   code: string;
