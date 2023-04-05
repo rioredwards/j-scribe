@@ -1,6 +1,6 @@
 {
-  "name": "@j-scribe/local-client",
-  "version": "1.0.2",
+  "name": "@j-scribe1/local-client",
+  "version": "0.0.0",
   "description": "Your All-in-One JavaScript Sandbox and Notebook.",
   "publishConfig": {
     "access": "public"
@@ -66,6 +66,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "gitHead": "f7d6e0d7a41e0845205b4d0d2d4e42d2dbe96317"
+  }
 }
