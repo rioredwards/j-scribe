@@ -6,9 +6,9 @@
   ],
   "scripts": {
     "start:cli": "lerna run start --parallel",
-    "start:web": "lerna run start --scope=@j-scribe/local-client",
-    "build:cli": "lerna run build --parallel",
-    "build:web": "lerna run build:web --scope=@j-scribe/local-client"
+    "start:web": "lerna run start --scope=@j-scribe1/local-client",
+    "build:cli": "lerna run build --scope=j-scribe1",
+    "build:web": "lerna run build:web --scope=@j-scribe1/local-client"
   },
   "devDependencies": {
     "lerna": "^6.6.1"

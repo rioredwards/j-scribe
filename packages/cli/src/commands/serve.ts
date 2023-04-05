@@ -21,10 +21,14 @@ export const serveCommand = new Command()
     try {
       // If the filename is intro.js, then dir is __dirname (where script lives) and file is intro.js
       // else dir is current working directory + any directory specified in the filename
-      const dir =
-        filename === "_intro.js"
-          ? __dirname
-          : path.join(process.cwd(), path.dirname(filename));
+      let dir: string;
+
+      if (filename === "_intro.js") {
+        if (!isProduction) dir = path.join(__dirname, "..");
+        else dir = __dirname;
+      } else {
+        dir = path.join(process.cwd(), path.dirname(filename));
+      }
 
       console.log("dir: ", dir);
       const file = path.basename(filename);

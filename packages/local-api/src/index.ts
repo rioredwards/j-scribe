@@ -23,7 +23,7 @@ export const serve = (
     );
   } else {
     const packagePath = require.resolve(
-      "@j-scribe/local-client/build/index.html"
+      "@j-scribe1/local-client/build/index.html"
     );
     app.use(express.static(path.dirname(packagePath)));
   }
