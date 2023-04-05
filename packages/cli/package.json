@@ -26,10 +26,10 @@
     "url": "https://github.com/rioredwards/j-scribe/issues"
   },
   "dependencies": {
-    "@j-scribe1/local-client": "*"
+    "@j-scribe1/local-client": "^1.0.0"
   },
   "devDependencies": {
-    "@j-scribe1/local-api": "*",
+    "@j-scribe1/local-api": "^1.0.0",
     "@types/node": "^18.15.10",
     "commander": "7.0.0",
     "esbuild": "^0.8.26",
