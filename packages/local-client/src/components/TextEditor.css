@@ -13,15 +13,25 @@
 }
 
 .card {
-  color: #000000 !important;
-  background-color: #ffffff !important;
+  border-radius: 8px;
+}
+
+#dark .card {
+  border: 1px solid #474747;
+  color: white;
+  background-color: #212121;
+}
+
+#light .card {
+  border: 1px solid #474747;
+  color: black;
+  background-color: white;
 }
 
 .text-editor .w-md-editor-bar {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAFAQMAAABo7865AAAABlBMVEVHcEzMzMzyAv2sAAAAAXRSTlMAQObYZgAAABBJREFUeF5jOAMEEAIEEFwAn3kMwcB6I2AAAAAASUVORK5CYII=");
   height: 11px;
   cursor: row-resize;
-  background-color: #f2f2f2 !important;
   background-repeat: no-repeat;
   background-position: 50%;
   width: 100%;
@@ -32,11 +42,6 @@
   line-height: unset;
   font-size: unset;
   font-weight: unset;
-  color: #000000 !important;
-}
-
-strong {
-  color: #000000 !important;
 }
 
 .w-md-editor ul {
@@ -51,19 +56,19 @@ strong {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAFAQMAAABo7865AAAABlBMVEVHcEzMzMzyAv2sAAAAAXRSTlMAQObYZgAAABBJREFUeF5jOAMEEAIEEFwAn3kMwcB6I2AAAAAASUVORK5CYII=");
   height: 11px;
   cursor: row-resize;
-  background-color: #f2f2f2 !important;
   background-repeat: no-repeat;
   background-position: 50%;
   width: 100%;
   position: relative;
+  z-index: 100;
 }
 
 .text-editor em {
   font-style: italic;
 }
 
-.text-editor .wmde-markdown hr {
-  border-top: 1px solid #dee5ed;
+#dark .text-editor .wmde-markdown hr {
+  border-top: 1px solid #f8f8f8;
 }
 
 .text-editor .wmde-markdown ol {
@@ -75,28 +80,80 @@ strong {
   z-index: 20;
 }
 
-.text-editor .w-md-editor-toolbar {
-  background-color: #000000 !important;
+#dark .text-editor .w-md-editor-toolbar {
+  background-color: #272727;
   border-bottom: 1px solid gray;
 }
 
-.text-editor .w-md-editor-toolbar li button {
+#dark .text-editor .w-md-editor-toolbar li button {
+  background-color: #474747;
+  color: white;
+}
+
+#light .text-editor .w-md-editor-toolbar li button {
+  background-color: white;
+  color: black;
+}
+
+#dark .text-editor .w-md-editor-content {
+  background-color: #212121;
+  color: white;
+}
+
+#light .text-editor .w-md-editor-content {
+  background-color: white;
+  color: black;
+}
+
+#dark .text-editor .w-md-editor,
+#dark .text-editor .w-md-editor .w-md-editor-text-pre {
+  color: #ffffff;
+}
+
+#light .text-editor .w-md-editor,
+#light .text-editor .w-md-editor .w-md-editor-text-pre {
   color: #000000;
 }
 
-.text-editor .w-md-editor-content {
-  background-color: #f2f2f2 !important;
-}
-
-.text-editor .w-md-editor,
-.text-editor .w-md-editor .w-md-editor-text-pre {
-  color: #000000;
-}
-
-.text-editor .w-md-editor-text-pre .bold {
+.text-editor .bold {
   color: unset;
 }
 
 .text-editor .token.list.punctuation {
   background-color: unset;
+}
+
+.token .tag {
+  margin: unset;
+  padding: unset;
+}
+
+#dark .wmde-markdown hr {
+  border-top: 1px solid white !important;
+}
+
+#light .wmde-markdown hr {
+  border-top: 1px solid black !important;
+}
+
+#dark .w-md-editor * {
+  color: white;
+}
+
+#dark .w-md-editor-text * {
+  color: white !important;
+  background-color: unset;
+}
+
+#light .w-md-editor * {
+  color: black !important;
+  background-color: unset;
+}
+
+#dark .text-editor .w-md-editor-bar {
+  background-color: #272727;
+}
+
+#light .text-editor .w-md-editor-bar {
+  background-color: white;
 }

@@ -5,5 +5,12 @@
 .action-bar-wrapper {
   height: 30px;
   width: 100%;
-  background-color: #e0e0e0 !important;
+}
+
+#dark .action-bar-wrapper {
+  background-color: #474747 !important;
+}
+
+#light .action-bar-wrapper {
+  background-color: #d7d7d7 !important;
 }

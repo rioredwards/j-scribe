@@ -1,7 +1,6 @@
 // -- App.tsx --
 import "bulmaswatch/superhero/bulmaswatch.min.css";
-// import CodeCell from "./components/CodeCell";
-// import TextEditor from "./components/TextEditor";
+import "./App.css";
 import CellList from "./components/CellList";
 import { useTheme } from "./context/ThemeContext";
 

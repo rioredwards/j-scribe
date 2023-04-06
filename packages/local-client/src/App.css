@@ -1,0 +1,29 @@
+#dark.app {
+  background-color: #2f2f2f;
+  color: white;
+}
+
+#light.app {
+  background-color: white;
+  color: black;
+}
+
+header {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 24px;
+}
+
+#dark header {
+  background-color: black;
+  color: white;
+}
+
+#light header {
+  background-color: white;
+  color: black;
+}

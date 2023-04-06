@@ -1,8 +1,15 @@
 .react-resizable-handle {
   display: block;
-  background-color: #f2f2f2 !important;
   background-repeat: no-repeat;
   background-position: 50%;
+}
+
+#dark .react-resizable-handle {
+  background-color: #474747;
+}
+
+#light .react-resizable-handle {
+  background-color: #d7d7d7;
 }
 
 .resize-horizontal {
