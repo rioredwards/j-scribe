@@ -18,7 +18,7 @@
     "url": "git+https://github.com/rioredwards/j-scribe.git"
   },
   "scripts": {
-    "build": "tsc --watch --preserveWatchOutput",
+    "build": "tsc",
     "prepublishOnly": "tsc"
   },
   "bugs": {
