@@ -39,6 +39,7 @@ const html = `
       <style>
         html {
           background-color: white;
+          color: black;
         }
         .error {
           color: red;

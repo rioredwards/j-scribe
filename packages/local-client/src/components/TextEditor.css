@@ -12,11 +12,16 @@
   display: none;
 }
 
+.card {
+  color: #000000 !important;
+  background-color: #ffffff !important;
+}
+
 .text-editor .w-md-editor-bar {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAFAQMAAABo7865AAAABlBMVEVHcEzMzMzyAv2sAAAAAXRSTlMAQObYZgAAABBJREFUeF5jOAMEEAIEEFwAn3kMwcB6I2AAAAAASUVORK5CYII=");
   height: 11px;
   cursor: row-resize;
-  background-color: #37414b;
+  background-color: #f2f2f2 !important;
   background-repeat: no-repeat;
   background-position: 50%;
   width: 100%;
@@ -27,7 +32,11 @@
   line-height: unset;
   font-size: unset;
   font-weight: unset;
-  color: #d4d4d4 !important;
+  color: #000000 !important;
+}
+
+strong {
+  color: #000000 !important;
 }
 
 .w-md-editor ul {
@@ -42,7 +51,7 @@
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAFAQMAAABo7865AAAABlBMVEVHcEzMzMzyAv2sAAAAAXRSTlMAQObYZgAAABBJREFUeF5jOAMEEAIEEFwAn3kMwcB6I2AAAAAASUVORK5CYII=");
   height: 11px;
   cursor: row-resize;
-  background-color: #37414b;
+  background-color: #f2f2f2 !important;
   background-repeat: no-repeat;
   background-position: 50%;
   width: 100%;
@@ -67,21 +76,21 @@
 }
 
 .text-editor .w-md-editor-toolbar {
-  background-color: #37414b;
+  background-color: #000000 !important;
   border-bottom: 1px solid gray;
 }
 
 .text-editor .w-md-editor-toolbar li button {
-  color: #d4d4d4;
+  color: #000000;
 }
 
 .text-editor .w-md-editor-content {
-  background-color: #202123;
+  background-color: #f2f2f2 !important;
 }
 
 .text-editor .w-md-editor,
 .text-editor .w-md-editor .w-md-editor-text-pre {
-  color: #d4d4d4;
+  color: #000000;
 }
 
 .text-editor .w-md-editor-text-pre .bold {
