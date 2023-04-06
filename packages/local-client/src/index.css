@@ -16,12 +16,23 @@ code {
     monospace;
 }
 
-.dark-mode {
-  background-color: black !important;
-  color: white !important;
+header {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 24px;
+  color: white;
 }
 
-.light-mode {
-  background-color: white !important;
-  color: black !important;
+#dark header {
+  background-color: black;
+  color: white;
+}
+
+#light header {
+  background-color: white;
+  color: black;
 }

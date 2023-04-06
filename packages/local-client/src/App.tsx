@@ -8,13 +8,11 @@ import { useTheme } from "./context/ThemeContext";
 const App = () => {
   const { isDarkMode, toggleTheme } = useTheme();
 
-  const theme = isDarkMode ? "dark-mode" : "light-mode";
+  const theme = isDarkMode ? "dark" : "light";
 
   return (
-    <div className={`app ${theme}`}>
-      <header style={{ color: "black", textAlign: "center", fontSize: "36px" }}>
-        {isDarkMode ? "dark" : "light"}
-      </header>
+    <div id={theme} className="app">
+      <header>{theme}</header>
       {/* button to change theme */}
       <button
         onClick={() => {
