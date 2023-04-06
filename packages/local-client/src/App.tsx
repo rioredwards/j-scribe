@@ -8,8 +8,10 @@ import { useTheme } from "./context/ThemeContext";
 const App = () => {
   const { isDarkMode, toggleTheme } = useTheme();
 
+  const theme = isDarkMode ? "dark-mode" : "light-mode";
+
   return (
-    <div className="app">
+    <div className={`app ${theme}`}>
       <header style={{ color: "black", textAlign: "center", fontSize: "36px" }}>
         {isDarkMode ? "dark" : "light"}
       </header>
