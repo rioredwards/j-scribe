@@ -2,7 +2,7 @@
 
 Your **All-in-One** JavaScript **Sandbox** and **Notebook**.
 
-![j-scribe screenshot](assets/j-scribe-logo-banner-blue.svg)
+![j-scribe screenshot](assets/j-scribe-banner-black-bg.png)
 
 j-scribe provides users with a versatile platform to create, share, and modify code snippets in real-time.
 
