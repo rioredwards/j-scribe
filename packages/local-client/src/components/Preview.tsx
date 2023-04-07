@@ -1,5 +1,6 @@
 import { useRef, useEffect } from "react";
 import "./Preview.css";
+import { useTheme } from "../context/ThemeContext";
 
 interface Props {
   code: string;
@@ -8,13 +9,14 @@ interface Props {
 
 const Preview: React.FC<Props> = ({ code, err }) => {
   const iframe = useRef<any>();
+  const { isDarkMode } = useTheme();
 
   useEffect(() => {
-    iframe.current.srcdoc = html;
+    iframe.current.srcdoc = generateHTML(isDarkMode);
     setTimeout(function () {
       iframe.current.contentWindow.postMessage(code, "*");
     }, 50);
-  }, [code]);
+  }, [code, isDarkMode]);
 
   return (
     <div className="preview-wrapper">
@@ -22,14 +24,14 @@ const Preview: React.FC<Props> = ({ code, err }) => {
         title="preview"
         sandbox="allow-scripts"
         ref={iframe}
-        srcDoc={html}
+        srcDoc={generateHTML(isDarkMode)}
       />
       {err && <div className="preview-error">{err}</div>}
     </div>
   );
 };
 
-const html = `
+const generateHTML = (isDarkMode: boolean) => `
     <html>
     <head>
       <meta charset="UTF-8" />
@@ -38,8 +40,8 @@ const html = `
       <title>Document</title>
       <style>
         html {
-          background-color: white;
-          color: black;
+          background-color: ${isDarkMode ? "#1e1e1e" : "white"};
+          color: ${isDarkMode ? "white" : "black"};
         }
         .error {
           color: red;

@@ -1,3 +1,7 @@
+#dark {
+  background-color: #2f2f2f;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -11,4 +15,56 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+#dark ::-webkit-scrollbar {
+  outline: 1px solid #4c4c4c7f;
+}
+
+#dark ::-webkit-scrollbar-track {
+  background: #272727;
+}
+
+#dark ::-webkit-scrollbar-track:hover {
+  background: #232323;
+}
+
+#dark ::-webkit-scrollbar-thumb {
+  background: #8282824f;
+}
+
+#dark ::-webkit-scrollbar-thumb:hover {
+  background: #82828276;
+}
+
+#dark ::-webkit-scrollbar-thumb:active {
+  background: #8f8f8f95;
+}
+
+#light ::-webkit-scrollbar {
+  outline: 1px solid #dedede7f;
+}
+
+#light ::-webkit-scrollbar-track {
+  background: #e0e0e0;
+}
+
+#light ::-webkit-scrollbar-track:hover {
+  background: #d4d4d4;
+}
+
+#light ::-webkit-scrollbar-thumb {
+  background: #4242424f;
+}
+
+#light ::-webkit-scrollbar-thumb:hover {
+  background: #42424269;
+}
+
+#light ::-webkit-scrollbar-thumb:active {
+  background: #42424291;
 }

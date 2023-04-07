@@ -1,9 +1,9 @@
-#dark.app {
+#dark .app {
   background-color: #2f2f2f;
   color: white;
 }
 
-#light.app {
+#light .app {
   background-color: white;
   color: black;
 }

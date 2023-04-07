@@ -1,5 +1,16 @@
 .cell-list-item {
   position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+#dark .cell-list-item {
+  background-color: #212121;
+  border: 1px solid #323232;
+}
+
+#light .cell-list-item {
+  background-color: white;
 }
 
 .action-bar-wrapper {
