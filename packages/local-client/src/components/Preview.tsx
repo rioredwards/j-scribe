@@ -54,7 +54,6 @@ const generateHTML = (isDarkMode: boolean) => `
           width: 8px;
           height: 8px;
         }
-        
         #dark ::-webkit-scrollbar {
           outline: 1px solid #4c4c4c7f;
         }
@@ -80,27 +79,27 @@ const generateHTML = (isDarkMode: boolean) => `
         }
         
         #light ::-webkit-scrollbar {
-          outline: 1px solid #dedede7f;
+          outline: 1px solid #c2c2c27f;
         }
         
         #light ::-webkit-scrollbar-track {
-          background: #e0e0e0;
+          background: #ececec;
         }
         
         #light ::-webkit-scrollbar-track:hover {
-          background: #d4d4d4;
+          background: #ffffff;
         }
         
         #light ::-webkit-scrollbar-thumb {
-          background: #4242424f;
+          background: #6464644f;
         }
         
         #light ::-webkit-scrollbar-thumb:hover {
-          background: #42424269;
+          background: #64646471;
         }
         
         #light ::-webkit-scrollbar-thumb:active {
-          background: #42424291;
+          background: #64646490;
         }
       </style>
     </head>

@@ -16,7 +16,8 @@
 }
 
 #light .cell-list-item {
-  background-color: white;
+  background-color: #e4e4e4;
+  border: 1px solid #8f8f8f3e;
 }
 
 .action-bar-wrapper {
@@ -29,5 +30,5 @@
 }
 
 #light .action-bar-wrapper {
-  background-color: #d7d7d7 !important;
+  background-color: #b5b5b5 !important;
 }

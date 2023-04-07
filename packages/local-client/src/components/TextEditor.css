@@ -167,6 +167,16 @@
   padding: unset;
 }
 
+#dark strong {
+  font-weight: bold;
+  color: white !important;
+}
+
+#light strong {
+  font-weight: bold;
+  color: black !important;
+}
+
 #dark .wmde-markdown hr {
   border-top: 1px solid white !important;
 }

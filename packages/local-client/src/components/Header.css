@@ -88,16 +88,20 @@ header {
   transition: none;
 }
 
-#dark i {
+#dark header i {
   color: #c6c6c6;
 }
 
-#dark i:hover {
+#light header i {
+  color: #919191;
+}
+
+#dark header i:hover {
   color: #dbdbdb;
 }
 
-#light i:hover {
-  color: #939393;
+#light header i:hover {
+  color: #757575;
 }
 
 i {
@@ -105,10 +109,6 @@ i {
   padding: 0;
   cursor: pointer;
   /* transition: color 0.2s ease-in 0.1s, transform 1.5s ease-in-out; */
-}
-
-.fa-moon {
-  transform: translateX(-2px);
 }
 
 .fa-terminal {
