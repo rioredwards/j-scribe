@@ -1,5 +1,4 @@
 // -- Header.tsx --
-import "@fortawesome/free-brands-svg-icons";
 import "./Header.css";
 import { useTheme } from "../context/ThemeContext";
 import { useEffect } from "react";
@@ -20,17 +19,30 @@ const Header: React.FC = () => {
           className="icon"
           src={
             process.env.PUBLIC_URL +
-            "/j-scribe-logos/j-scribe-logo-white-app-500.png"
+            (isDarkMode
+              ? "/j-scribe-logos/j-scribe-logo-white-app-500.png"
+              : "/j-scribe-logos/j-scribe-logo-black-app-500.png")
           }
           alt="J-Scribe Icon"
         />
       </div>
-      <button className="theme-switcher-btn" onClick={toggleTheme}>
-        <i className="fa-brands fa-npm" />
-      </button>
-      <button className="theme-switcher-btn" onClick={toggleTheme}>
-        <i className={`fas ${isDarkMode ? "fa-sun" : "fa-moon"}`} />
-      </button>
+      <ul className="nav-links">
+        <li className="nav-item">
+          <a
+            href="https://www.npmjs.com/package/j-scribe1"
+            target="_blank"
+            className="cli-link"
+            title="CLI"
+            rel="noreferrer">
+            <i className="fas fa-terminal" />
+          </a>
+        </li>
+        <li className="nav-item">
+          <button className="theme-btn" onClick={toggleTheme}>
+            <i className={`fas ${isDarkMode ? "fa-sun" : "fa-moon"}`} />
+          </button>
+        </li>
+      </ul>
     </header>
   );
 };

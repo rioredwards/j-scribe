@@ -25,6 +25,7 @@ header {
   align-items: center;
   justify-content: center;
   height: 48px;
+  cursor: pointer;
 }
 
 .logo .icon {
@@ -32,10 +33,26 @@ header {
   height: 42px;
 }
 
-.theme-switcher-btn {
-  background-color: transparent;
+.nav-links {
   padding: 0;
   margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  gap: 20px;
+}
+
+.nav-item {
+  height: 36px;
+  width: 36px;
+}
+
+.theme-btn,
+.cli-link {
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
   border: none;
   outline: none;
   border-radius: 50%;
@@ -43,39 +60,45 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 36px;
-  width: 36px;
   font-size: 32px;
   transition: background-color 0.2s ease-out;
 }
 
-.theme-switcher-btn:active {
+.theme-btn:active {
   background-color: rgba(133, 133, 133, 0.306);
 }
 
-.theme-switcher-btn i {
-  margin: 0;
-  padding: 0;
-  color: #bbbbbb;
-  transition: color 0.2s ease-in 0.1s;
-  transition: transform 1.5s ease-in-out;
-}
-
-.theme-switcher-btn i:hover {
-  animation: spin 4s linear infinite;
+.theme-btn i:hover {
+  animation: spin 4s ease-in-out infinite;
   transition: none;
 }
 
-#dark .theme-switcher-btn i:hover {
+#dark i {
+  color: #c6c6c6;
+}
+
+#dark i:hover {
   color: #dbdbdb;
 }
 
-#light .theme-switcher-btn i:hover {
+#light i:hover {
   color: #939393;
+}
+
+i {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  /* transition: color 0.2s ease-in 0.1s, transform 1.5s ease-in-out; */
 }
 
 .fa-moon {
   transform: translateX(-2px);
+}
+
+.fa-terminal {
+  font-size: 26px;
+  transform: translateY(2px);
 }
 
 @keyframes spin {
@@ -85,4 +108,9 @@ header {
   to {
     transform: rotate(360deg);
   }
+}
+
+.theme-btn i,
+.cli-link i {
+  cursor: pointer;
 }
