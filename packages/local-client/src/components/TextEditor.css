@@ -34,6 +34,30 @@
   position: relative;
 }
 
+#dark .text-editor .w-md-editor-bar {
+  background-color: #474747;
+}
+
+#dark .text-editor .w-md-editor-bar:hover {
+  background-color: #4f4f4f;
+}
+
+#dark .text-editor .w-md-editor-bar:active {
+  background-color: #5d5d5d;
+}
+
+#light .text-editor .w-md-editor-bar {
+  background-color: #d7d7d7;
+}
+
+#light .text-editor .w-md-editor-bar:hover {
+  background-color: #c3c3c3;
+}
+
+#light .text-editor .w-md-editor-bar:active {
+  background-color: #b3b3b3;
+}
+
 .w-md-editor .title {
   line-height: unset;
   font-size: unset;
@@ -159,12 +183,4 @@
 #light .w-md-editor * {
   color: black !important;
   background-color: unset;
-}
-
-#dark .text-editor .w-md-editor-bar {
-  background-color: #272727;
-}
-
-#light .text-editor .w-md-editor-bar {
-  background-color: white;
 }
