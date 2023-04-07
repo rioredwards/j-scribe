@@ -1,10 +1,10 @@
 header {
-  height: 54px;
+  padding: 0 20px;
+  height: 64px;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+  justify-content: flex-start;
   font-size: 24px;
   margin-bottom: 20px;
   box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.063);
@@ -20,9 +20,22 @@ header {
   color: black;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+}
+
+.logo .icon {
+  width: 42px;
+  height: 42px;
+}
+
 .theme-switcher-btn {
   background-color: transparent;
   padding: 0;
+  margin-left: auto;
   border: none;
   outline: none;
   border-radius: 50%;
