@@ -5,6 +5,7 @@ import "./CodeEditor.css";
 import MonacoEditor, { EditorDidMount } from "@monaco-editor/react";
 import prettier from "prettier";
 import parser from "prettier/parser-babel";
+import { useTheme } from "../context/ThemeContext";
 
 interface CodeEditorProps {
   initialValue: string;
@@ -13,13 +14,18 @@ interface CodeEditorProps {
 
 const CodeEditor: React.FC<CodeEditorProps> = ({ onChange, initialValue }) => {
   const editorRef = useRef<any>();
+  const { isDarkMode } = useTheme();
+
+  const theme = isDarkMode ? "dark" : "light";
 
   const onEditorDidMount: EditorDidMount = (getValue, monacoEditor) => {
     editorRef.current = monacoEditor;
     monacoEditor.onDidChangeModelContent(() => {
       onChange(getValue());
     });
+
     monacoEditor.getModel()?.updateOptions({ tabSize: 2 });
+    console.log("monacoEditor: ", monacoEditor);
   };
 
   const onFormatClick = () => {
@@ -53,7 +59,7 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ onChange, initialValue }) => {
       <MonacoEditor
         editorDidMount={onEditorDidMount}
         value={initialValue}
-        theme="light"
+        theme={theme}
         language="javascript"
         className="monaco-editor"
         options={{
