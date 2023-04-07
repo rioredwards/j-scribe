@@ -4,9 +4,10 @@ import "./App.css";
 import CellList from "./components/CellList";
 import { useTheme } from "./context/ThemeContext";
 import { useEffect } from "react";
+import Header from "./components/Header";
 
 const App = () => {
-  const { isDarkMode, toggleTheme } = useTheme();
+  const { isDarkMode } = useTheme();
   const theme = isDarkMode ? "dark" : "light";
 
   useEffect(() => {
@@ -16,17 +17,7 @@ const App = () => {
 
   return (
     <div className="app">
-      <header>{theme}</header>
-      {/* button to change theme */}
-      <button
-        onClick={() => {
-          console.log("toggling theme");
-          toggleTheme();
-        }}
-        className="button is-primary is-small">
-        Toggle Theme
-      </button>
-
+      <Header />
       <CellList />
     </div>
   );

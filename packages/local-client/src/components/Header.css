@@ -1,0 +1,75 @@
+header {
+  height: 54px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.063);
+}
+
+#dark header {
+  background-color: #5b5b5b;
+  color: white;
+}
+
+#light header {
+  background-color: white;
+  color: black;
+}
+
+.theme-switcher-btn {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  width: 36px;
+  font-size: 32px;
+  transition: background-color 0.2s ease-out;
+}
+
+.theme-switcher-btn:active {
+  background-color: rgba(133, 133, 133, 0.306);
+}
+
+.theme-switcher-btn i {
+  margin: 0;
+  padding: 0;
+  color: #bbbbbb;
+  transition: color 0.2s ease-in 0.1s;
+  transition: transform 1.5s ease-in-out;
+}
+
+.theme-switcher-btn i:hover {
+  animation: spin 4s linear infinite;
+  transition: none;
+}
+
+#dark .theme-switcher-btn i:hover {
+  color: #dbdbdb;
+}
+
+#light .theme-switcher-btn i:hover {
+  color: #939393;
+}
+
+.fa-moon {
+  transform: translateX(-2px);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
