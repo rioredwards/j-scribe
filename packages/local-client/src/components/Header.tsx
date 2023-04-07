@@ -15,16 +15,18 @@ const Header: React.FC = () => {
   return (
     <header>
       <div className="logo">
-        <img
-          className="icon"
-          src={
-            process.env.PUBLIC_URL +
-            (isDarkMode
-              ? "/j-scribe-logos/j-scribe-logo-white-app-500.png"
-              : "/j-scribe-logos/j-scribe-logo-black-app-500.png")
-          }
-          alt="J-Scribe Icon"
-        />
+        <a href="/">
+          <img
+            className="icon"
+            src={
+              process.env.PUBLIC_URL +
+              (isDarkMode
+                ? "/j-scribe-logos/j-scribe-logo-white-app-500.png"
+                : "/j-scribe-logos/j-scribe-logo-black-app-500.png")
+            }
+            alt="J-Scribe Icon"
+          />
+        </a>
       </div>
       <ul className="nav-links">
         <li className="nav-item">
