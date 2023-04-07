@@ -32,19 +32,75 @@ const Preview: React.FC<Props> = ({ code, err }) => {
 };
 
 const generateHTML = (isDarkMode: boolean) => `
-    <html>
+    <html id=${isDarkMode ? "dark" : "light"}>
     <head>
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Document</title>
       <style>
-        html {
-          background-color: ${isDarkMode ? "#1e1e1e" : "white"};
-          color: ${isDarkMode ? "white" : "black"};
+        #dark {
+          background-color: #1e1e1e;
+          color: white;
+        }
+        #light {
+          background-color: white;
+          color: black;
         }
         .error {
           color: red;
+        }
+        ::-webkit-scrollbar {
+          width: 8px;
+          height: 8px;
+        }
+        
+        #dark ::-webkit-scrollbar {
+          outline: 1px solid #4c4c4c7f;
+        }
+        
+        #dark ::-webkit-scrollbar-track {
+          background: #272727;
+        }
+        
+        #dark ::-webkit-scrollbar-track:hover {
+          background: #232323;
+        }
+        
+        #dark ::-webkit-scrollbar-thumb {
+          background: #8282824f;
+        }
+        
+        #dark ::-webkit-scrollbar-thumb:hover {
+          background: #82828276;
+        }
+        
+        #dark ::-webkit-scrollbar-thumb:active {
+          background: #8f8f8f95;
+        }
+        
+        #light ::-webkit-scrollbar {
+          outline: 1px solid #dedede7f;
+        }
+        
+        #light ::-webkit-scrollbar-track {
+          background: #e0e0e0;
+        }
+        
+        #light ::-webkit-scrollbar-track:hover {
+          background: #d4d4d4;
+        }
+        
+        #light ::-webkit-scrollbar-thumb {
+          background: #4242424f;
+        }
+        
+        #light ::-webkit-scrollbar-thumb:hover {
+          background: #42424269;
+        }
+        
+        #light ::-webkit-scrollbar-thumb:active {
+          background: #42424291;
         }
       </style>
     </head>
