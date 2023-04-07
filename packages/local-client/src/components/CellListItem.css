@@ -4,6 +4,11 @@
   overflow: hidden;
 }
 
+.cell-list-item:hover {
+  transform: scale(1.001);
+  box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.119);
+}
+
 #dark .cell-list-item {
   background-color: #212121;
   border: 1px solid #323232;
