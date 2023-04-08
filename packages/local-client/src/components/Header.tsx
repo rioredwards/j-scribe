@@ -21,8 +21,8 @@ const Header: React.FC = () => {
             src={
               process.env.PUBLIC_URL +
               (isDarkMode
-                ? "/j-scribe-logos/j-scribe-logo-white-app-500.png"
-                : "/j-scribe-logos/j-scribe-logo-black-app-500.png")
+                ? "/j-scribe-logos/j-scribe-logo-black-app-500.png"
+                : "/j-scribe-logos/j-scribe-logo-white-app-500.png")
             }
             alt="J-Scribe Icon"
           />
