@@ -15,7 +15,7 @@ const TextEditor: React.FC<Props> = ({ cell }) => {
 
   useEffect(() => {
     // This sets edit mode to false when the user clicks outside the editor
-    const listener = (event: MouseEvent) => {
+    const clickListener = (event: MouseEvent) => {
       if (
         ref.current &&
         event.target &&
@@ -25,9 +25,18 @@ const TextEditor: React.FC<Props> = ({ cell }) => {
       }
       setEditing(false);
     };
-    document.addEventListener("click", listener, { capture: true });
+    // This sets edit mode to false when the user presses the escape key
+    const escListener = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setEditing(false);
+      }
+    };
+
+    document.addEventListener("click", clickListener, { capture: true });
+    document.addEventListener("keydown", escListener, { capture: true });
     return () => {
-      document.removeEventListener("click", listener, { capture: true });
+      document.removeEventListener("click", clickListener, { capture: true });
+      document.removeEventListener("keypress", escListener, { capture: true });
     };
   }, []);
 

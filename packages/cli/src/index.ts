@@ -2,7 +2,7 @@
 import { program } from "commander";
 import { serveCommand } from "./commands/serve";
 
-console.log("Welcome to jbook!");
+console.log("Welcome to j-scribe!");
 
 program.addCommand(serveCommand);
 

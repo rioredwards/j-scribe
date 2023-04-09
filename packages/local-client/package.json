@@ -1,6 +1,7 @@
 {
-  "name": "@jbook-notes/local-client",
-  "version": "1.2.6",
+  "name": "@j-scribe1/local-client",
+  "version": "4.0.0",
+  "description": "Your All-in-One JavaScript Sandbox and Notebook.",
   "publishConfig": {
     "access": "public"
   },
@@ -45,8 +46,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:web": "npm run build",
-    "prebuild:web": "cpy _intro.js packages/local-client/public --cwd=../../"
+    "dev": "npm run build & npm run start",
+    "prebuild": "cpy _intro.js packages/local-client/public --cwd=../../"
   },
   "eslintConfig": {
     "extends": [

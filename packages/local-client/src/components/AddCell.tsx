@@ -29,7 +29,6 @@ const AddCell: React.FC<Props> = ({ prevCellId, forceVisible }) => {
           <span>Text</span>
         </button>
       </div>
-      <div className="divider"></div>
     </div>
   );
 };

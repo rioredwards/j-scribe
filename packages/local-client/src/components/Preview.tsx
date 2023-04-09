@@ -1,5 +1,6 @@
 import { useRef, useEffect } from "react";
 import "./Preview.css";
+import { useTheme } from "../context/ThemeContext";
 
 interface Props {
   code: string;
@@ -8,13 +9,14 @@ interface Props {
 
 const Preview: React.FC<Props> = ({ code, err }) => {
   const iframe = useRef<any>();
+  const { isDarkMode } = useTheme();
 
   useEffect(() => {
-    iframe.current.srcdoc = html;
+    iframe.current.srcdoc = generateHTML(isDarkMode);
     setTimeout(function () {
       iframe.current.contentWindow.postMessage(code, "*");
     }, 50);
-  }, [code]);
+  }, [code, isDarkMode]);
 
   return (
     <div className="preview-wrapper">
@@ -22,26 +24,82 @@ const Preview: React.FC<Props> = ({ code, err }) => {
         title="preview"
         sandbox="allow-scripts"
         ref={iframe}
-        srcDoc={html}
+        srcDoc={generateHTML(isDarkMode)}
       />
       {err && <div className="preview-error">{err}</div>}
     </div>
   );
 };
 
-const html = `
-    <html>
+const generateHTML = (isDarkMode: boolean) => `
+    <html id=${isDarkMode ? "dark" : "light"}>
     <head>
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Document</title>
       <style>
-        html {
+        #dark {
+          background-color: #1e1e1e;
+          color: white;
+        }
+        #light {
           background-color: white;
+          color: black;
         }
         .error {
           color: red;
+        }
+        ::-webkit-scrollbar {
+          width: 8px;
+          height: 8px;
+        }
+        #dark ::-webkit-scrollbar {
+          outline: 1px solid #4c4c4c7f;
+        }
+        
+        #dark ::-webkit-scrollbar-track {
+          background: #272727;
+        }
+        
+        #dark ::-webkit-scrollbar-track:hover {
+          background: #232323;
+        }
+        
+        #dark ::-webkit-scrollbar-thumb {
+          background: #8282824f;
+        }
+        
+        #dark ::-webkit-scrollbar-thumb:hover {
+          background: #82828276;
+        }
+        
+        #dark ::-webkit-scrollbar-thumb:active {
+          background: #8f8f8f95;
+        }
+        
+        #light ::-webkit-scrollbar {
+          outline: 1px solid #c2c2c27f;
+        }
+        
+        #light ::-webkit-scrollbar-track {
+          background: #ececec;
+        }
+        
+        #light ::-webkit-scrollbar-track:hover {
+          background: #ffffff;
+        }
+        
+        #light ::-webkit-scrollbar-thumb {
+          background: #6464644f;
+        }
+        
+        #light ::-webkit-scrollbar-thumb:hover {
+          background: #64646471;
+        }
+        
+        #light ::-webkit-scrollbar-thumb:active {
+          background: #64646490;
         }
       </style>
     </head>

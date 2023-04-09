@@ -1,6 +1,6 @@
 import path from "path";
 import { Command } from "commander";
-import { serve } from "@jbook-notes/local-api";
+import { serve } from "@j-scribe1/local-api";
 
 interface LocalApiError {
   code: string;
@@ -21,12 +21,16 @@ export const serveCommand = new Command()
     try {
       // If the filename is intro.js, then dir is __dirname (where script lives) and file is intro.js
       // else dir is current working directory + any directory specified in the filename
-      const dir =
-        filename === "_intro.js"
-          ? __dirname
-          : path.join(process.cwd(), path.dirname(filename));
+      let dir: string;
 
-      console.log("dir: ", dir);
+      if (filename === "_intro.js") {
+        if (!isProduction) dir = path.join(__dirname, "..");
+        else dir = __dirname;
+      } else {
+        dir = path.join(process.cwd(), path.dirname(filename));
+      }
+
+      console.log("directory: ", dir);
       const file = path.basename(filename);
 
       await serve(parseInt(options.port), file, dir, !isProduction);
@@ -38,7 +42,7 @@ export const serveCommand = new Command()
       if (isLocalApiError(err)) {
         if (err.code === "EADDRINUSE") {
           console.error(
-            `😢 ERROR: Port ${options.port} is in use - try running on a different port using 'jbook serve -p <your-port-here>'`
+            `😢 ERROR: Port ${options.port} is in use - try running on a different port using 'j-scribe serve -p <your-port-here>'`
           );
         }
       } else if (err instanceof Error) {

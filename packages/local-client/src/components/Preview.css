@@ -4,6 +4,16 @@
   flex-grow: 1;
 }
 
+#dark .preview-wrapper,
+#dark .progress-wrapper {
+  background-color: #212121;
+}
+
+#light .preview-wrapper,
+#light .progress-wrapper {
+  background-color: white;
+}
+
 .preview-wrapper iframe {
   height: 100%;
   width: 100%;

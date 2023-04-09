@@ -1,8 +1,31 @@
 .react-resizable-handle {
   display: block;
-  background-color: #37414b;
   background-repeat: no-repeat;
   background-position: 50%;
+}
+
+#dark .react-resizable-handle {
+  background-color: #474747;
+}
+
+#dark .react-resizable-handle:hover {
+  background-color: #82828286;
+}
+
+#dark .react-resizable-handle:active {
+  background-color: #828282b6;
+}
+
+#light .react-resizable-handle {
+  background-color: #b5b5b5;
+}
+
+#light .react-resizable-handle:hover {
+  background-color: #b0b0b0;
+}
+
+#light .react-resizable-handle:active {
+  background-color: #999999;
 }
 
 .resize-horizontal {
