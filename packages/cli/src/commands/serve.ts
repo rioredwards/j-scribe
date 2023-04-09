@@ -30,7 +30,7 @@ export const serveCommand = new Command()
         dir = path.join(process.cwd(), path.dirname(filename));
       }
 
-      console.log("dir: ", dir);
+      console.log("directory: ", dir);
       const file = path.basename(filename);
 
       await serve(parseInt(options.port), file, dir, !isProduction);
