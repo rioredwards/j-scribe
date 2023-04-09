@@ -25,14 +25,14 @@ This project served as an educational exercise to enhance my understanding of Ty
 - **Library Support**: Utilize popular libraries and frameworks to enhance your coding experience.
 - **Text-Editor**: j-scribe provides a user-friendly way to document code using the built-in Markdown text-editor.
 - **Sharing and Collaboration**: j-scribe projects are automatically serialized and saved to user's machines, making it possible to store and share projects with others.
-- **Command-Line Interface**: j-scribe offers a convenient CLI, available on npm, for opening and creating j-scribe files from the command line. `j-scribe serve <filename>` starts a local API and opens the front-end application on a localhost port, allowing users to easily access and interact with j-scribe in their browser.
+- **Command-Line Interface**: j-scribe offers a convenient CLI, available on npm, for opening and creating j-scribe files from the command line. `j-scribe1 serve <filename>` starts a local API and opens the front-end application on a localhost port, allowing users to easily access and interact with j-scribe in their browser.
 
 ## Usage
 
-1. Install the [CLI](https://www.npmjs.com/package/j-scribe-notes) by running `npm i j-scribe-notes`.
-2. Open the built-in tutorial with `j-scribe-notes serve _intro` and follow the instructions to get familiar with the basic features j-scribe offers.
-3. Open new or existing notes with `j-scribe-notes serve <filename>` (Optionally include a filepath: `j-scribe-notes serve <path/filename>`).
-4. Run `j-scribe-notes --help` for additional help
+1. Install the [CLI](https://www.npmjs.com/package/j-scribe) by running `npm i j-scribe1`.
+2. Open the built-in tutorial with `j-scribe1 serve _intro` and follow the instructions to get familiar with the basic features j-scribe offers.
+3. Open new or existing notes with `j-scribe1 serve <filename>` (Optionally include a filepath: `j-scribe1 serve <path/filename>`).
+4. Run `j-scribe1 --help` for additional help
 
 ## Preview
 
