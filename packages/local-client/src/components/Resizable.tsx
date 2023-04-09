@@ -26,9 +26,31 @@ const Resizable: React.FC<ResizableProps> = ({
   let resizableProps: ResizableBoxProps;
   const [innerWidth, setInnerWidth] = useState(window.innerWidth);
   const [width, setWidth] = useState(window.innerWidth * 0.6);
+  const [isResizing, setIsResizing] = useState(false);
 
   const validInitCellHeight = (initCellHeight =
     getValidInitialHeight(initCellHeight));
+
+  const handleScroll = (e: MouseEvent) => {
+    const buffer = 100;
+    const scrollSpeedDown = 3;
+    const scrollSpeedUp = -3;
+
+    if (e.clientY > window.innerHeight - buffer) {
+      window.scrollBy(0, scrollSpeedDown);
+    } else if (e.clientY < buffer) {
+      window.scrollBy(0, scrollSpeedUp);
+    }
+  };
+  useEffect(() => {
+    if (isResizing) {
+      window.addEventListener("mousemove", handleScroll);
+    }
+
+    return () => {
+      window.removeEventListener("mousemove", handleScroll);
+    };
+  }, [isResizing]);
 
   useEffect(() => {
     let timer: any;
@@ -59,7 +81,7 @@ const Resizable: React.FC<ResizableProps> = ({
       height: Infinity,
       width,
       resizeHandles: ["e"],
-      onResizeStop: (event, data) => {
+      onResizeStop: (_, data) => {
         setWidth(data.size.width);
       },
     };
@@ -70,6 +92,12 @@ const Resizable: React.FC<ResizableProps> = ({
       height: validInitCellHeight || MIN_INIT_HEIGHT,
       width: Infinity,
       resizeHandles: ["s"],
+      onResizeStart: () => {
+        setIsResizing(true);
+      },
+      onResizeStop: () => {
+        setIsResizing(false);
+      },
     };
   }
 
