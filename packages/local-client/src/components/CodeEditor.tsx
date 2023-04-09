@@ -7,6 +7,9 @@ import prettier from "prettier";
 import parser from "prettier/parser-babel";
 import { useTheme } from "../context/ThemeContext";
 
+export const LINE_HEIGHT = 18.2;
+export const LINE_PADDING = 30;
+
 interface CodeEditorProps {
   initialValue: string;
   onChange(value: string): void;
@@ -25,12 +28,9 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ onChange, initialValue }) => {
     });
 
     monacoEditor.getModel()?.updateOptions({ tabSize: 2 });
-    console.log("monacoEditor: ", monacoEditor);
   };
 
   const onFormatClick = () => {
-    console.log("format");
-    console.log(editorRef.current);
     // Get current value from editor
     const unformatted = editorRef.current.getModel().getValue();
 
@@ -63,12 +63,13 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ onChange, initialValue }) => {
         language="javascript"
         className="monaco-editor"
         options={{
-          wordWrap: "on",
+          wordWrap: "off",
           minimap: { enabled: false },
           showUnused: false,
           folding: false,
           lineNumbersMinChars: 3,
           fontSize: 16,
+          lineHeight: LINE_HEIGHT,
           scrollBeyondLastLine: false,
           automaticLayout: true,
         }}

@@ -3,7 +3,7 @@ import "./CodeCell.css";
 import { useEffect } from "react";
 import Preview from "./Preview";
 import Resizable from "./Resizable";
-import CodeEditor from "./CodeEditor";
+import CodeEditor, { LINE_HEIGHT, LINE_PADDING } from "./CodeEditor";
 import { Cell } from "../state";
 import { useActions } from "../hooks/useActions";
 import { useTypedSelector } from "../hooks/useTypedSelector";
@@ -17,6 +17,9 @@ const CodeCell: React.FC<CodeCellProps> = ({ cell }) => {
   const { updateCell, createBundle } = useActions();
   const bundle = useTypedSelector((state) => state.bundles[cell.id]);
   const cumulativeCode = useCumulativeCode(cell.id);
+
+  const linesOfCode = cell.content.split("\n").length;
+  let initCellHeight = linesOfCode * LINE_HEIGHT + LINE_PADDING;
 
   useEffect(() => {
     if (!bundle) {
@@ -35,7 +38,7 @@ const CodeCell: React.FC<CodeCellProps> = ({ cell }) => {
   }, [cell.id, cumulativeCode]);
 
   return (
-    <Resizable direction="vertical">
+    <Resizable direction="vertical" initCellHeight={initCellHeight}>
       <div className="code-cell">
         <Resizable direction="horizontal">
           <CodeEditor
