@@ -3,6 +3,10 @@
   transition: background-color 0.2s ease-in 0.1s;
 }
 
+html {
+  background-color: #e4e4e4;
+}
+
 #dark {
   background-color: #2f2f2f;
 }
