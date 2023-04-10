@@ -27,7 +27,7 @@ With support for a variety of libraries and frameworks, j-scribe's intuitive use
 
 ## Usage
 
-1. Install the [CLI](https://www.npmjs.com/package/j-scribe) by running `npm i j-scribe1`.
+1. Install the [CLI](https://www.npmjs.com/package/j-scribe1) by running `npm i j-scribe1`.
 2. Open the built-in tutorial with `j-scribe1 serve _intro` and follow the instructions to get familiar with the basic features j-scribe offers.
 3. Open new or existing notes with `j-scribe1 serve <filename>` (Optionally include a filepath: `j-scribe1 serve <path/filename>`).
 4. Run `j-scribe1 --help` for additional help
