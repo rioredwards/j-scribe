@@ -36,7 +36,7 @@ This project served as an educational exercise to enhance my understanding of Ty
 
 ## Preview
 
-![j-scribe preview](assets/j-scribe_preview.webp)
+![j-scribe preview](assets/j-scribe_preview.gif)
 
 ## Lessons Learned
 
