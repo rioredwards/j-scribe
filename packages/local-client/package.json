@@ -1,6 +1,6 @@
 {
   "name": "@j-scribe1/local-client",
-  "version": "4.0.4",
+  "version": "4.0.5",
   "description": "Your All-in-One JavaScript Sandbox and Notebook.",
   "publishConfig": {
     "access": "public"
