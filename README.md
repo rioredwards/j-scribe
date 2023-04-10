@@ -2,15 +2,13 @@
 
 Your **All-in-One** JavaScript **Sandbox** and **Notebook**.
 
-![j-scribe screenshot](assets/j-scribe-banner-black-bg.png)
+![j-scribe screenshot](https://raw.githubusercontent.com/rioredwards/j-scribe/main/assets/j-scribe-banner-black-bg.png)
 
 j-scribe provides users with a versatile platform to create, share, and modify code snippets in real-time.
 
 With support for a variety of libraries and frameworks, j-scribe's intuitive user interface and live preview make it easy to see the results of your code as you type.
 
 ---
-
-This project served as an educational exercise to enhance my understanding of TypeScript, React, and React-Redux. It was developed by following along with this 30-hour comprehensive Udemy tutorial: [React and Typescript: Build a Portfolio Project](https://www.udemy.com/course/react-and-typescript-build-a-portfolio-project/) created by the fantastic [Stephen Grider](https://www.udemy.com/user/sgslo/).
 
 ## Tech Stack
 
@@ -36,7 +34,7 @@ This project served as an educational exercise to enhance my understanding of Ty
 
 ## Preview
 
-![j-scribe preview](assets/j-scribe_preview.gif)
+![j-scribe preview](https://raw.githubusercontent.com/rioredwards/j-scribe/main/assets/j-scribe_preview.gif)
 
 ## Lessons Learned
 
@@ -53,9 +51,16 @@ This project served as an educational exercise to enhance my understanding of Ty
 - Utilizing **web-assembly** to go... **BLAZINGLY FAST!**
 - **Deploying** to npm and vercel.
 
+## Reflection
+
+This project was a great learning experience for me. I learned a ton about TypeScript, React, and React-Redux as well as some project-specific libraries such as Monaco-Editor and Resizable. An unexpected challenge I faced was working with lerna and understanding the build process. This project contains multiple packages, and I had to learn how to configure lerna to build and deploy the packages in the correct order and for different production environments.
+
+I also learned a lot about the importance of planning and design when building a large-scale application. It's very clear to me how useful OOP principles can be in designing larger apps. Developing each component in a modular way and ensuring that the code is reusable makes it much easier to modify and add more features later on.
+
+I had a lot of fun working on this project, and I'm excited to continue learning and improving my skills. ✅
+
 ## Acknowledgements
 
-- [Udemy - React and Typescript: Build a Portfolio Project](https://www.udemy.com/course/react-and-typescript-build-a-portfolio-project/)
 - [readme.so](https://readme.so/editor)
 - [Simple Icons](https://simpleicons.org/?q=redux)
 - [shields.io](https://shields.io/)
