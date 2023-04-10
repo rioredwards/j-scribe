@@ -36,7 +36,7 @@ This project served as an educational exercise to enhance my understanding of Ty
 
 ## Preview
 
-![j-scribe preview](https://raw.githubusercontent.com/rioredwards/j-scribe/main/assets/j-scribe_preview.webp)
+![j-scribe preview](https://raw.githubusercontent.com/rioredwards/j-scribe/main/assets/j-scribe_preview.gif)
 
 ## Lessons Learned
 
