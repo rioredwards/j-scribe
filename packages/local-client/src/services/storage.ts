@@ -11,7 +11,7 @@ export async function fetchFromStorage() {
   if (process.env.REACT_APP_WEB_BUILD === "true") {
     data = await cellsCache.getItem("cells");
     console.log("data: ", data);
-    if (data?.length === 0) {
+    if (!data || data?.length === 0) {
       data = await fetchIntroFile();
     }
     return data;
