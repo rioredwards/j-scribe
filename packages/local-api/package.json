@@ -1,6 +1,6 @@
 {
   "name": "@j-scribe1/local-api",
-  "version": "4.0.2",
+  "version": "4.0.5",
   "description": "Your All-in-One JavaScript Sandbox and Notebook.",
   "author": "Rio Edwards <rioredwards@gmail.com>",
   "homepage": "https://github.com/rioredwards/j-scribe#readme",
@@ -31,7 +31,7 @@
     "typescript": "^5.0.2"
   },
   "dependencies": {
-    "@j-scribe1/local-client": "^4.0.2",
+    "@j-scribe1/local-client": "^4.0.5",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "http-proxy-middleware": "^2.0.6"
